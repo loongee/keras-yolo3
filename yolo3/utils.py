@@ -21,7 +21,7 @@ def letterbox_image(image, size):
     '''resize image with unchanged aspect ratio using padding'''
     iw, ih = image.size
     w, h = size
-    scale = min(w/iw, h/ih)
+    scale = min(w/float(iw), h/float(ih))
     nw = int(iw*scale)
     nh = int(ih*scale)
 
